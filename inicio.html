@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript Samples</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="sample.css" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+        <script src="sample.js"></script>
+    </head>
+    <body onload="configurarEventoBuscar()">
+        <div class="container">
+            <section id="formulario">
+                <form id="myForm" method=GET action="http://www.google.com/search">
+                    <fieldset>   
+                        <ul class="toolbar clearfix">
+                            <li><a href="#" class="fontawesome-heart"></a></li>
+                            <li><a href="#" class="fontawesome-eye-open"></a></li>
+                            <li><a href="#" class="fontawesome-comment"></a></li>
+                            <li><input type="text" id="search" name=q size=31 maxlength=255 placeholder="Escribe lo que buscas ..."></li>
+                            <li><input type=hidden name=hl value=es></li>
+                            <li><button type="submit" name=btnG id="btn-search"><span class="fontawesome-search"></span></button></li>
+                        </ul>
+                    </fieldset>
+                </form>
+            </section>
+            <section id="imagen">
+                <center>
+                    <img src="Narcos.png" alt="Smiley face" height="400" width="600">
+                </center>
+            </section>
+        </div> <!-- end container -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </body>
+</html>

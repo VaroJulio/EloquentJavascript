@@ -43,20 +43,6 @@ function obtenerLista(){
 }
 
 function arrayToList(array){
-    console.log(array.length);
-    let arrayObjects = [];
-    array.forEach(function(item, index){
-        if (index < array.length){
-            arrayObjects[index] = {value: index + 1, rest: null};
-        }
-    });
-    for (x = arrayObjects.length -1; x > 0; x--){
-        arrayObjects[x - 1].rest = arrayObjects[x];              
-    }
-    return arrayObjects[0];
-}
-
-function arrayToList(array){
     let arrayObjects = [];
     array.forEach(function(item, index){
         if (index < array.length){

@@ -46,7 +46,7 @@ function arrayToList(array){
     let arrayObjects = [];
     array.forEach(function(item, index){
         if (index < array.length){
-            arrayObjects[index] = {value: index + 1, rest: null};
+            arrayObjects[index] = {value: item, rest: null};
         }
     });
     for (x = arrayObjects.length -1; x > 0; x--){
@@ -58,7 +58,6 @@ function arrayToList(array){
 function listToArray(list){
     let arrResult = [];
     var bandera = true;
-    console.log(list.value);
     do{
         if (list.value !== null)
         {
@@ -74,3 +73,14 @@ function listToArray(list){
     while(bandera === true)
     return arrResult;
 }
+
+function prepend(item, list){
+    return {value: item, rest: list}
+}
+
+function nth(list, num){
+    if (!list) return undefined;
+    else if (num == 0) return list.value;
+    else return nth(list.rest, num - 1);
+}
+

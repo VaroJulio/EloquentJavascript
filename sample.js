@@ -55,3 +55,36 @@ function arrayToList(array){
     }
     return arrayObjects[0];
 }
+
+function arrayToList(array){
+    let arrayObjects = [];
+    array.forEach(function(item, index){
+        if (index < array.length){
+            arrayObjects[index] = {value: index + 1, rest: null};
+        }
+    });
+    for (x = arrayObjects.length -1; x > 0; x--){
+        arrayObjects[x - 1].rest = arrayObjects[x];              
+    }
+    return arrayObjects[0];
+}
+
+function listToArray(list){
+    let arrResult = [];
+    var bandera = true;
+    console.log(list.value);
+    do{
+        if (list.value !== null)
+        {
+            arrResult.push(list.value);
+            if (list.rest !== null){
+                list = list.rest;
+            }
+            else{
+                bandera = false;
+            }
+        }
+    }
+    while(bandera === true)
+    return arrResult;
+}

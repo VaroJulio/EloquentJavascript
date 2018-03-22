@@ -84,3 +84,13 @@ function nth(list, num){
     else return nth(list.rest, num - 1);
 }
 
+function filter(array, test){
+    let passed = [];
+    for (let element of array){
+        if (test(element)){
+            passed.push(element);
+        }
+    }
+    return passed;
+} 
+

@@ -100,11 +100,18 @@ var nombres = rtlScripts.map(s => s.name);
 
 [1,2,3].reduce((a,b) => a + b);
 
-console.log(filter(SCRIPTS, script => script.year === 1987);
-
-console.log(map(rtlScripts, s => s.name));
+console.log(filter(SCRIPTS, script => script.year === 1987));
 
 var nombres = rtlScripts.map(s => s.name);
 
 nombres.reduce((a,b) => a + b);
 
+var arrayOfArrays = [
+    ["hola", "no", "jamas"],
+    ["señora", "niño", "trabajador"],
+    ["excelente", "bueno", "malo", "regular", "no me importa"]    
+];
+
+function flattenArrays(arr){
+    return arr.reduce((a,b) => a.concat(b));
+}

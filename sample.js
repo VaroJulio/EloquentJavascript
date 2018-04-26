@@ -115,3 +115,73 @@ var arrayOfArrays = [
 function flattenArrays(arr){
     return arr.reduce((a,b) => a.concat(b));
 }
+
+class Vector {
+    constructor(x,y){
+        this.x= x;
+        this.y=y;
+    }
+
+    get getX(){
+        return this.x;
+    }
+
+    set setX(value){
+        this.x=x;
+    }
+
+    get getY(){
+        return this.y;
+    }
+
+    set setY(value){
+        this.y=y;
+    }
+
+    plus(array){
+        return [this.y + array.x, this.y + array.y];
+    }
+
+    minus(array){
+        return [this.y - array.x, this.y - array.y];
+    }
+
+    get length(){
+        return Math.sqrt((Math.pow(this.x,2) + Math.pow(this.y,2)));
+    }
+}
+
+class Group {
+    constructor(){
+        this.valores = [];
+    };
+
+    has(value){
+        return this.valores.includes(value);
+    };
+
+    delete(value){
+        if (this.has(value)){
+            let x = this.valores.indexOf(value);
+            this.valores.splice(x, 1);         
+        }else
+        {
+            console.log("No existe este valor en el grupo.");  
+        }
+    };
+
+    add(value){
+        if (this.has(value)){
+            console.log("Ya existe este valor en el grupo."); 
+        }else
+        {
+            this.valores.push(value);
+        }
+    };
+
+    static from(array){
+        let grupoEstatico = new Group();
+        grupoEstatico.valores = array.map(item => item);
+        return grupoEstatico;
+    }
+}
